@@ -48,7 +48,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
     /* ADD DATA ONE TIME ONLY OR AS NEEDED */
     // Удаляет всю информацию из БД. Нужно только для первоначального тестирования.
-    // await mongoose.connection.db.dropDatabase();
+    await mongoose.connection.db.dropDatabase();
     // Вставляет данные из data.js
     KPI.insertMany(kpis);
     Product.insertMany(products);
